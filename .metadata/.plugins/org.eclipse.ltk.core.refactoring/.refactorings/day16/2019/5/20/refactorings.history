@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="从表达式“new Date()”中抽取局部变量“date”&#x0D;&#x0A;－ 原始项目：“day16”&#x0D;&#x0A;－ 变量名称：“date”&#x0D;&#x0A;－ 目标方法：“cn.itcast.demo02.DateDemo01.main()”&#x0D;&#x0A;－ 变量表达式：“new Date()”&#x0D;&#x0A;－ 将出现的表达式替换为变量" description="抽取局部变量“date”" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;cn.itcast.demo02{DateDemo01.java" name="date" replace="true" selection="204 0" stamp="1558186934617" version="1.0"/>
+</session>

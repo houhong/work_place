@@ -1,0 +1,32 @@
+package demo;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+/*
+ * 字节输入流
+ */
+public class demo {
+
+	public demo() {
+		// TODO 自动生成的构造函数存根
+	}
+	public static void main(String[] args) throws Exception {
+
+		BufferedReader  br =null;
+		//字符输入流
+		br  = new BufferedReader(new FileReader("f:\\write.txt"));
+
+
+
+
+
+
+
+
+
+
+	}
+
+}

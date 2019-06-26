@@ -1,0 +1,31 @@
+1559717012554	Extract local variable 'obj'
+1559810720496	Extract local variable 'object'
+1559811816770	Extract local variable 'obj'
+1559812614958	Delete element
+1559813540984	Delete element
+1559813548737	Delete element
+1559815494522	Extract local variable 'obj'
+1559823561165	Delete element
+1559826457442	Extract local variable 'br'
+1559833399968	Extract local variable 'rand'
+1559834465030	Extract local variable 'obj'
+1559834747963	Extract local variable 'obj'
+1559835529970	Extract local variable 'sb'
+1559837057282	Extract local variable 'obj'
+1559841274004	Delete element
+1559841405972	Delete element
+1559882458770	Extract local variable 'vakue'
+1559883066952	Extract local variable 'keySet'
+1559883303210	Extract local variable 'charArr'
+1559883760310	Delete element
+1559883964974	Rename compilation unit 'Demo7.java'
+1559884247657	Extract local variable 'charArr'
+1559885058176	Extract local variable 'charArr'
+1559888178532	Extract local variable 'obj'
+1559888361233	Extract local variable 'br'
+1559893362726	Extract local variable 'file'
+1559893469519	Extract local variable 'FR'
+1559894584123	Delete element
+1559894846545	Extract local variable 'file'
+1559894925173	Extract local variable 'fr'
+1559895662160	Extract local variable 'fileA'

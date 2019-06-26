@@ -1,0 +1,9 @@
+package LinkTable;
+
+public class Test1 {
+
+	public Test1() {
+		// TODO 自动生成的构造函数存根
+	}
+
+}

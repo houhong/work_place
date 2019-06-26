@@ -1,0 +1,61 @@
+package 作业2;
+
+
+
+public class Input implements Runnable{
+
+	//准备数据
+	int count = 0;
+
+	
+
+	public Resource re;
+	public Input(Resource re) {
+		this.re = re;
+	}
+
+	@Override
+	public   void run() {
+		// TODO 自动生成的方法存根
+
+		while(true){
+			//使输出线程等待
+			synchronized(re){
+
+				if(re.flag ==true){
+					re.notify();
+					re.setFlag(false);
+				}
+
+				System.out.print(arr[count]);
+				count++;
+				
+				if(count>=26){
+					break;
+				}
+				/*	if(count>52)
+				{
+					break;
+				}
+				int[] array= Data();
+
+				System.out.print(array[count]);
+				System.out.println(array[++count]);*/
+
+				try {
+					re.wait();
+				} catch (InterruptedException e) {
+					// TODO 自动生成的 catch 块
+					e.printStackTrace();
+				}
+
+
+			}
+
+		}
+
+
+
+	}
+
+}

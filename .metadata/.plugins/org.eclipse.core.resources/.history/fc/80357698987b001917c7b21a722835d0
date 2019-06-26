@@ -1,0 +1,16 @@
+package demo;
+
+import java.util.HashMap;
+
+public class demo2 {
+
+	public demo2() {
+		// TODO 自动生成的构造函数存根
+	}
+	public static void main(String[] args) {
+		HashMap<String, Integer> hashMap = new HashMap<String,Integer>();
+		hashMap.put("张三", 6000);
+		hashMap.put(key, value)
+	}
+
+}

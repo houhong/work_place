@@ -1,0 +1,103 @@
+package xom.it.houhong.二叉树;
+
+
+//泛型类
+public class BST1 <E extends Comparable<E>>{
+
+	private class Node{
+
+		public E e;
+		public Node left,right;
+
+		//节点的定义
+		public Node(E e) {
+
+			this.e = e;
+
+			this.left = null;
+			this.right =null;
+		}
+
+		public Node() {
+
+			this.e = e;
+
+			this.left = null;
+			this.right =null;
+		}
+
+
+
+
+	}
+
+	//根节点和二叉树的长度
+	private  Node root;
+	private  int size;
+
+	//二叉树的属性的获取
+	public Node getRoot() {
+		return root;
+	}
+
+	public void setRoot(Node root) {
+		this.root = root;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	//二叉树的构造
+	public BST1() {
+		this.root = root;
+		this.size = size;
+	}
+
+	
+	public void add(E e){
+		
+		if (root == null ) {
+			root = new Node(e);
+		} else {
+			add(root, e);
+		}
+		
+		
+		
+	}
+	//二叉树的添加方法
+	private Node add(Node node,E e){
+
+		/*if (e.equals(node.e))      {
+			return;
+		}
+		else if (e.compareTo(node.e) < 0  && node.left== null) {
+
+			node.left = new Node(e);
+			return;
+		}
+		else if (e.compareTo(node.e) > 0  && node.right == null) {
+			node.right = new Node(e);
+			return;
+		}*/
+		
+		if (node == null) {
+			
+		} else {
+
+		}
+		
+		if (e.compareTo(node.e) <0) {
+			   add(node.left,e);
+		} else {
+				add(node.right,e);
+		}
+	}
+
+
+}

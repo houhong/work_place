@@ -1,0 +1,12 @@
+package xom.it.houhong.二叉树;
+/*
+ * 二叉树的代码实现
+ */
+
+public class BST ex {
+
+	public BST() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

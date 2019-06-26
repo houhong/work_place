@@ -1,0 +1,42 @@
+package xom.it.houhong.二叉树;
+
+import java.util.Comparator;
+
+/*
+ * 二叉树的代码实现
+ */
+
+public class BST<E extends Comparator<E>>{
+
+	
+	private class Node{
+		
+		
+		E e;
+		Node left,right;
+		
+		//构造方法
+		public Node() {
+			
+			left = null;
+			right = null;
+		}
+		
+		
+		
+	}
+	
+	public BST() {
+		
+	}
+
+   
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+package xom.it.houhong.二叉树;
+/*
+ * 二叉排序树
+ */
+
+public class BST<E extends Comparable<E>>{
+
+	public E e;
+	public BST() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	//节点
+	private class Node{
+		
+		public E e;
+		public Node left,right;
+		
+		public Node() {
+			this.e = e;
+			this.left=null;
+			this.right=null;
+		}
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,21 @@
+package demo;
+
+import java.io.ObjectOutputStream;
+/*
+ * 序列化 
+ */
+
+public class Serlizable {
+
+	public Serlizable() {
+		// TODO 自动生成的构造函数存根
+	}
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void test1()throws Exception{
+		new ObjectOutputStream(new ObjectOutputStream());
+	}
+
+}

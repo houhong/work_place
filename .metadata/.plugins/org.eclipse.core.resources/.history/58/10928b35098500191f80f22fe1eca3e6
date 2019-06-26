@@ -1,0 +1,32 @@
+package xom.it.houhong.二叉树;
+
+
+//泛型类
+public class BST1 <E extends Comparable<E>>{
+
+	
+	
+	
+	private class Node{
+		
+		E e;
+		Node left,right;
+
+		//节点的定义
+		public Node() {
+			
+			this.e = e;
+			
+		    this.left = null;
+		    this.right =null;
+		}
+		
+		
+		
+		
+	}
+	public BST1() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

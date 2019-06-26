@@ -1,0 +1,12 @@
+package demo;
+/*
+ * 给出文本：找到最大值！！！！
+ */
+
+public class FindMax {
+
+	public FindMax() {
+		// TODO 自动生成的构造函数存根
+	}
+
+}

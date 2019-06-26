@@ -1,0 +1,13 @@
+package com.nio;
+/*
+ * Nio
+ * 
+ */
+
+public class demo2 {
+
+	public demo2() {
+		// TODO 自动生成的构造函数存根
+	}
+
+}

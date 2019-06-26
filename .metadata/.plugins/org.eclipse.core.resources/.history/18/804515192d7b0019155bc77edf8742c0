@@ -1,0 +1,62 @@
+package cn.itcast.demo3;
+
+import java.io.File;
+import java.io.FileFilter;
+/*
+ * File类获取功能
+ *  list
+ *  listFiles
+ */
+import java.io.FilenameFilter;
+
+public class demo1 {
+
+	public demo1() {
+		// TODO 自动生成的构造函数存根
+	}
+	public static void main(String[] args) {
+		//function();
+		//function2();
+		//function3();
+	}
+	//递归目录
+	public static void Return(){
+		File file  = new File("f:\\");
+		if(file.isDirectory()){
+			
+		}
+		File[] lf = file.listFiles();
+	}
+	
+	public static void function(){
+		File[] lf = File.listRoots();
+		for(File file:lf){
+			System.out.println(file);
+		}
+	}
+
+	public static void function2(){
+		File file = new File("f:\\qq文件");
+		File[] lf = file.listFiles();
+		
+		for(File file2 :lf){
+			System.out.println(file2);
+		}
+	}
+
+	//过滤器
+	public static void function5(){
+		
+		File file = new File("f:\\");
+		File[] fileList = file.listFiles(new FileFilter() {
+			
+			public boolean accept(File path,String name) {
+				// TODO 自动生成的方法存根
+				return  new File(path,name).exists() && name.endsWith(".txt");
+			}
+		});
+		
+	}
+	
+	
+}

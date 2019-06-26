@@ -1,0 +1,41 @@
+package 作业2;
+
+
+
+public class Output implements Runnable{
+
+	int count =1;
+	public Resource re;
+	public Output(Resource re) {
+		this.re = re;
+	}
+
+	@Override
+	public void run() {
+
+		while(true){
+			synchronized(re){
+
+				if(re.flag == false  && count ==50){
+					count = 1;
+					re.notify();
+					re.setFlag(true);
+				}
+				System.out.println("我是输出！！");
+
+
+				try {
+					if(count == 50){
+						re.wait();
+					}
+
+				} catch (InterruptedException e) {
+					// TODO 自动生成的 catch 块
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+
+}

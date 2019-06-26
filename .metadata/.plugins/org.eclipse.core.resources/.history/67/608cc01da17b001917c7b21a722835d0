@@ -1,0 +1,41 @@
+package demo;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.util.HashMap;
+
+/*
+ * 给出文本：找到最大值！！！！  例如： 
+ */
+
+public class FindMax {
+
+	public FindMax() {
+		// TODO 自动生成的构造函数存根
+	}
+	public static void main(String[] args) throws Exception{
+
+		//BufferedInputStream bis = new BufferedInputStream(new FileInputStream("f:\\demo.txt"));
+
+		BufferedReader br = new BufferedReader( new FileReader("f:\\demo.txt"));
+
+		String read =null;
+		while((read=br.readLine())!=null){
+
+			//对字符串的处理
+			String[] split = read.split(",");
+			String name = split[0];
+			String money = split[1];
+			int money2 = Integer.valueOf(split[1]);
+
+			//System.out.println(read);
+		}
+		HashMap<String, Person> hm = new HashMap<String,Person>();
+		if(!hm.containsKey(name)){
+			//hm.put(name, Person);
+		}
+	}
+
+}

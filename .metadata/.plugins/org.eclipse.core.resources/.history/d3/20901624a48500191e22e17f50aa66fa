@@ -1,0 +1,288 @@
+package xom.it.houhong.二叉树;
+
+import java.util.Stack;
+
+public class BST1<E extends Comparable<E>> {
+
+	private class Node {
+		public E e;
+		public Node left, right;
+
+		public Node(E e) {
+			this.e = e;
+			left = null;
+			right = null;
+		}
+	}
+
+	private Node root;
+	private int size;
+
+	public BST1(){
+		root = null;
+		size = 0;
+	}
+
+	public int size(){
+		return size;
+	}
+
+	public boolean isEmpty(){
+		return size == 0;
+	}
+
+	// 向二分搜索树中添加新的元素e
+	public void add(E e){
+		root = add(root, e);
+	}
+
+	// 向以node为根的二分搜索树中插入元素e，递归算法
+	// 返回插入新节点后二分搜索树的根
+	private Node add(Node node, E e){
+
+
+		if(node == null){
+			size ++;
+			return new Node(e);
+		}
+
+		if(e.compareTo(node.e) < 0)
+			node.left = add(node.left, e);
+		else if(e.compareTo(node.e) > 0)
+			node.right = add(node.right, e);
+
+		return node;
+	}
+
+	// 看二分搜索树中是否包含元素e
+	public boolean contains(E e){
+		return contains(root, e);
+	}
+
+	// 看以node为根的二分搜索树中是否包含元素e, 递归算法
+	private boolean contains(Node node, E e){
+
+		if(node == null)
+			return false;
+
+		if(e.compareTo(node.e) == 0)
+			return true;
+		else if(e.compareTo(node.e) < 0)
+			return contains(node.left, e);
+		else // e.compareTo(node.e) > 0
+			return contains(node.right, e);
+	}
+
+	//前序遍历
+	public void preOrder(){
+
+		preOrder(root);
+	}
+
+
+	public void preOrder(Node node){
+
+		if (node == null) {
+			return;
+		}
+
+		System.out.println(node.e);
+		preOrder(node.left);
+		preOrder(node.right);
+
+	}
+
+	//中序遍历
+	public void inOrder(){
+
+		inOrder(root);
+	}
+
+
+	public void inOrder(Node node){
+
+		if (node == null) {
+			return;
+		}
+
+		inOrder(node.left);
+
+		System.out.println(node.e);
+
+		inOrder(node.right);
+	}
+
+	//后序遍历
+	public void postOrder(){
+		postOrder(root);
+	}
+
+	//后序遍历
+	public void postOrder(Node node){
+
+		//当前方法结束
+		if(node == null){
+			return;
+		}
+		postOrder(node.left);
+		postOrder(node.right);
+		System.out.println(node.e);
+
+	}
+
+
+
+
+	/*//非递归前序遍历
+	public void preOrderNR(){
+		preOrder(root);
+	}
+	//非递归算法前序 --- 模拟系统栈 -- 这种写法太棒了
+	public void preOrderNR(Node node){
+
+		Stack<Node >  stack = new Stack<>();
+
+		stack.push(node);
+
+		while(!stack.isEmpty()){
+			Node cur = stack.pop();
+			System.out.println(cur.e);
+
+			if (cur.right !=null) {
+				stack.push(cur.right);
+			}
+
+			if (cur.left !=null) {
+				stack.push(cur.left);
+			}
+		}
+	}*/
+	//一路向左的写法
+	public void preOrderNR(){
+		preOrder(root);
+	}
+
+	public void preOrderNR(Node node ){
+
+		//用栈
+		Stack<Node> stack = new Stack<>();
+		//一路向左
+		//记录下根节点  --用于找到右节点
+		while(node!=null  || !stack.isEmpty()){
+
+
+			while (node!=null) {
+
+				System.out.println(node.e);
+				stack.push(node);
+				node= node.left;
+			}
+
+
+			//找到右节点
+			if (!stack.isEmpty()) {
+
+				node= stack.pop();
+				node= node.right;
+
+			}
+
+
+
+		}
+
+	}
+
+	//非递归中序
+	public void inOrderNR(){
+		inOrder(root);
+	}
+
+	//永远先考虑左子树，直到左子树为空才访问根节点
+	public void inOrderNR(Node node){
+
+		Stack<Node> stack = new Stack<>();
+
+		while(node!=null || !stack.isEmpty()){
+			//1:存入根节点
+			while(node!=null) {
+				stack.push(node);
+				node=node.left;
+			}
+
+			//找到右边
+			if(!stack.isEmpty()){
+				node=stack.pop();
+				System.out.println(node.e);
+				node =node.right;
+			}
+
+		}
+	}
+
+	public void postOrderNR(){
+		preOrderNR(root);
+	}
+
+	public void postOrderNR(Node node){
+
+		Stack<Node> stack = new Stack<>();
+
+		//后序遍历
+		while(node!=null){
+			stack.push(node);
+			node= node.left;
+		}
+        
+		if(!stack.isEmpty()){
+			
+			node=stack.peek();
+		}
+
+
+
+	}
+	//生成二叉树 --递归
+	public void generateDepthString(Node node,int depth,StringBuilder res){
+
+
+		if (node == null) {
+
+			res.append(generateDepthString(depth)+"null\n");
+			return;
+		}
+		//输出根节点
+		res.append(generateDepthString(depth)+node.e+"\n");
+		//左节点
+		generateDepthString(node.left, depth+1, res);
+		//右节点
+		generateDepthString(node.right,depth+1,res);
+
+
+	}
+
+
+
+
+	//输出层次
+	public String  generateDepthString(int depth){
+
+		StringBuilder res = new StringBuilder();
+
+		for (int i = 0; i < depth; i++) {
+			res.append("--");
+		}
+		//返回当前的值
+		return res.toString();
+	}
+
+
+	//toString方法
+	@Override
+	public String toString() {
+		StringBuilder res = new StringBuilder();
+		generateDepthString(root, 0, res);
+
+		return res.toString();
+	}
+}

@@ -1,0 +1,13 @@
+package it.input.demo2;
+
+import sun.applet.Main;
+/*
+ * 将一个文件复制到另一个文件：
+ */
+
+public class copy {
+	
+  public static void main(String[] args) {
+	//1:创建两个文件：输入流和输出流
+}
+}

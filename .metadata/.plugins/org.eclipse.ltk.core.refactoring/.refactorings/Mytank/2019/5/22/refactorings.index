@@ -1,0 +1,7 @@
+1559216520353	Rename type 'Myframe'
+1559216600660	Extract local variable 'dt'
+1559216728372	Extract local variable 'screenSize'
+1559216754444	Extract local variable 'height'
+1559216765520	Extract local variable 'width'
+1559220491080	Extract local variable 'heroTank'
+1559221591417	Extract local variable 'timer'

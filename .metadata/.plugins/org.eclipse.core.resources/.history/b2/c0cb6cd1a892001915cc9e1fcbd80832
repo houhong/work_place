@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+package com.woniuxy.atm05;
+/**
+ * @author Administrator
+ *
+ */
+public class Record {
+	static String[] operation = new String[20];
+}

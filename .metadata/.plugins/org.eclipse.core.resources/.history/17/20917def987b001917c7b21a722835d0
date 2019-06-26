@@ -1,0 +1,28 @@
+package demo;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class demo2 {
+
+	public demo2() {
+		// TODO 自动生成的构造函数存根
+	}
+	public static void main(String[] args) {
+		HashMap<String, Integer> hashMap = new HashMap<String,Integer>();
+		hashMap.put("张三", 6000);
+		hashMap.put("李四", 900);
+		hashMap.put("张三", 2000);
+		
+		Set<Entry<String, Integer>> entrySet = hashMap.entrySet();
+		
+		Iterator<Entry<String, Integer>> iterator = entrySet.iterator();
+		while(iterator.hasNext()){
+			Entry<String, Integer> entry=iterator.next();
+			System.out.println();
+		}
+	}
+
+}

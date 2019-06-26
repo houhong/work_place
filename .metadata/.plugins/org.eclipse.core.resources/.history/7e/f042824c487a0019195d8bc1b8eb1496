@@ -1,0 +1,15 @@
+package it.input.demo1;
+
+import java.io.FileOutputStream;
+
+/*
+ * Êä³öÁ÷: FileOutputStream 
+ */
+
+public class output {
+	
+  public static void main(String[] args) {
+	  
+	   FileOutputStream fileOutputStream = new FileOutputStream(file);
+}
+}

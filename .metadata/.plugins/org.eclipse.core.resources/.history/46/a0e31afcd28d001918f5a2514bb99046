@@ -1,0 +1,12 @@
+package demo;
+/*
+ * 打印各种三角形
+ */
+
+public class Demo10 {
+
+	public Demo10() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

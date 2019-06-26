@@ -1,0 +1,35 @@
+package demo;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.util.HashMap;
+
+
+/*     交了智商税   --刷letcode
+ * 给出文本：如    张三，1400
+ * 			    李四，1600
+ * 			    张三，1500
+ * 输出次数最多张三-- 金额1600 
+ * 找到最大值！！！！  例如： 
+ */
+//老师的思路
+public class FindMax {
+
+	public FindMax() {
+		// TODO 自动生成的构造函数存根
+	}
+	
+	public static void main(String[] args) {
+		
+		//用map存储数据   -- 定义一个对象：属性是：名字，次数，最大金额 --面向对象
+	
+	}
+	
+	
+	
+	
+	
+
+}

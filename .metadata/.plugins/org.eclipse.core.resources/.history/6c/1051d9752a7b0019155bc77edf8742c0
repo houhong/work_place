@@ -1,0 +1,29 @@
+package cn.itcast.demo3;
+
+import java.io.File;
+/*
+ * java基础 File与递归练习
+	使用文件过滤器筛选将指定文件夹下的小于200K的小文件获取并打印按层次打印
+	(包括所有子文件夹的文件)，
+ */
+import java.io.FileFilter;
+
+public class shuati {
+
+	public shuati() {
+		// TODO 自动生成的构造函数存根
+	}
+	public static void function(){
+		
+		File file = new File("f:\\");
+		File[] files = file.listFiles(new FileFilter() {
+			
+			@Override
+			public boolean accept(File pathname) {
+				// TODO 自动生成的方法存根
+				return false;
+			}
+		});
+	}
+
+}

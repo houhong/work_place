@@ -1,0 +1,18 @@
+package demo;
+
+import java.io.BufferedReader;
+
+/*
+ * 字节输入流
+ */
+public class demo {
+
+	public demo() {
+		// TODO 自动生成的构造函数存根
+	}
+   public static void main(String[] args) {
+	   
+	BufferedReader  br  = new BufferedReader(in);
+}
+  
+}

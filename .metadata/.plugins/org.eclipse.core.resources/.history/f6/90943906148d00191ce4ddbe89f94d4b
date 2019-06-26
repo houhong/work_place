@@ -1,0 +1,40 @@
+package demo;
+/*
+ * 三角形
+ * 1.输出三角形
+        *
+       ***
+      *****
+     *******
+    *********
+   ***********
+  *************
+ ***************
+*/
+
+public class Demo1 {
+
+	public Demo1() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		
+		for (int i = 1; i < 7; i++) {
+			for (int j = 0; j < 7; j++) {
+				
+				//System.out.print("*");
+					/*
+					if(j==i){
+						System.out.println("*");
+					}
+					else{
+						System.out.print("o");
+					}*/
+				
+			}
+			System.out.println();
+		}	
+	}
+
+}

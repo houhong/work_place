@@ -1,0 +1,44 @@
+package 作业2;
+
+
+
+public class Input implements Runnable{
+
+	//准备数据
+	
+	public Resource re;
+	public Input(Resource re) {
+		this.re = re;
+	}
+
+	@Override
+	public   void run() {
+		// TODO 自动生成的方法存根
+
+		while(true){
+			//使输出线程等待
+			synchronized(re){
+
+				if(re.intput_flag ==20){
+					re.notify();
+					re.setIntput_flag(0);
+				}
+
+			     System.out.println("需要注水！  --一次注入20L");
+				try {
+					re.wait();
+				} catch (InterruptedException e) {
+					// TODO 自动生成的 catch 块
+					e.printStackTrace();
+				}
+
+
+			}
+
+		}
+
+
+
+	}
+
+}

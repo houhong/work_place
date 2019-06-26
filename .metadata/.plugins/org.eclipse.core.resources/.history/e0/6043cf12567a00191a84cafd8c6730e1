@@ -1,0 +1,8 @@
+package it.input.demo2;
+/*
+ * 将一个文件复制到另一额文件
+ */
+
+public class copy {
+
+}

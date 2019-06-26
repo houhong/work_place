@@ -1,0 +1,40 @@
+package cn.itcast.demo2;
+/*
+ * String类的Demo
+ * 
+ */
+
+public class StringDemo {
+
+	public StringDemo() {
+		// TODO 自动生成的构造函数存根
+	}
+
+	public static void main(String[] args) {
+		
+		fucntion1();
+		fucntion2();
+	}
+	
+	/* trim()   ---复制文本*/
+	public static void fucntion1(){
+		
+		String str1="i love you!!!";
+		String str2=str1.trim();
+		System.out.println(str2);
+	}
+	/* trim()   ---复制文本*/
+	public static void fucntion2(){
+		
+		String str1="i love you!!!";
+		String str2="me too";
+		int i =str1.compareToIgnoreCase(str2);
+		System.out.println(i);
+		//String  str2=str1.valueOf(str1);
+		int len = str1.length();
+		
+		System.out.println(len);
+		System.out.println(str2);
+	}
+	
+}

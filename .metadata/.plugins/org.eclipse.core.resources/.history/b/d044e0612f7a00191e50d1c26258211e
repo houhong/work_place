@@ -1,0 +1,20 @@
+package cn.itcast.demo;
+
+import java.io.File;
+
+/*
+ * File的构造器
+ */
+public class File_conttrstor {
+
+	//主方法
+	public static void main(String[] args) {
+
+		//第一种
+		File file = new File("f:");
+		System.out.println();
+
+		//第二种
+		File file2 = new File(file,"BaiduNetdisk");
+	}
+}

@@ -1,0 +1,22 @@
+package demo;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class Son  extends Father{
+
+	public Son() {
+		// TODO 自动生成的构造函数存根
+	}
+
+	public static void main(String[] args) {
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f:\\objectoutputSream.txt"));
+	}
+	
+	public   void eat(){
+		System.out.println("我是儿子！！！");
+	}
+
+
+}

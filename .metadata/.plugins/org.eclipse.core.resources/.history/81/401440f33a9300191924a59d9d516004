@@ -1,0 +1,66 @@
+package it.houhong.poke;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Play {
+	package com.woniuxy.demo;
+
+	import java.util.ArrayList;
+	import java.util.Collections;
+	import java.util.List;
+
+	public class Play {
+		public static void main(String[] args) {
+			List<Poker> b = new ArrayList<Poker>();
+			String[] c = {"黑桃", "红心", "梅花", "方块"};
+			for(int i = 2; i < 11; i++) {
+				for(int j = 0; j < c.length; j++) {
+					String c1 = c[j];
+					Poker d = new Poker1(c1, i+"");
+					b.add(d);
+				}
+			}
+			String[] num = {"J", "Q", "K", "A"};
+			for(int i = 0; i < num.length; i++) {
+				for(int j = 0; j < c.length; j++) {
+					Poker n = new Poker1(c[j], num[i]);
+					b.add(n);
+				}
+			}
+			b.add(new Poker2("大王"));
+			b.add(new Poker2("小王"));
+			Collections.shuffle(b);
+			List<Poker> a1 = new ArrayList<Poker>();
+			List<Poker> b1 = new ArrayList<Poker>();
+			List<Poker> c1 = new ArrayList<Poker>();
+			for(int i = 0; i < b.size() - 3; i++) {
+				if(i % 3 == 0) a1.add(b.get(i));
+				if(i % 3 == 1) b1.add(b.get(i));
+				if(i % 3 == 2) c1.add(b.get(i));
+			}
+			System.out.println("玩家1：" + a1);
+			System.out.println("玩家2：" + b1);
+			System.out.println("玩家3：" + c1);
+			System.out.print("底牌：");
+			for(int i = b.size() - 3; i < b.size(); i++) {
+				System.out.print(b.get(i) + " ");
+			}
+			
+			
+//			for (int i = 0; i < a1.size(); i++) {
+//				if(a1.get(i)) {
+//					
+//				}
+//			}
+			
+			
+			
+			
+			
+		}
+	}
+
+	
+}

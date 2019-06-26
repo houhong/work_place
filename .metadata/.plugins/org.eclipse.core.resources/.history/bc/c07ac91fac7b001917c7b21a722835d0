@@ -1,0 +1,19 @@
+package demo;
+
+import java.io.Serializable;
+/*
+ * 次数最大的人
+ */
+
+public class Person implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public String name;
+	public int  money;
+	public int    count;
+
+	
+}

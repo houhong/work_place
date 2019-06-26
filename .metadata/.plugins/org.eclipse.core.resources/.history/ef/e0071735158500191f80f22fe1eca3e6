@@ -1,0 +1,16 @@
+package xom.it.houhong.¶ş²æÊ÷;
+/*
+ * ²âÊÔÀà
+ */
+
+public class Test {
+
+	public Test() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

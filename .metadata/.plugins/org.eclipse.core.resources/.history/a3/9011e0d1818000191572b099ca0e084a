@@ -1,0 +1,65 @@
+package LinkTable;
+
+import javax.sound.midi.MidiChannel;
+/*
+ *   二分查找  -- 有序数组用二分查找  --- 
+ *   
+ *   
+ */
+
+public class Test1 {
+
+	public Test1() {
+		// TODO 自动生成的构造函数存根
+	}
+
+	public static void main(String[] args) {
+		
+		
+		
+
+
+	}
+
+	
+	public static int binarySerach(int key,int[] arr){
+		//条件：数组有序	
+		int lo = 0;
+		int hi = arr.length -1;
+
+		while(lo<= hi){
+
+			int mid = (hi - lo)/2;
+			//如果当前数据<中数据 在数组单位左边
+			if (key <=arr[mid]) {
+				hi = arr[mid];
+			} else if(key>arr[mid]) {
+				lo= arr[mid];
+			}else{
+				return mid;
+			}
+
+		}
+		return -1;
+
+	}
+	
+	/*
+	 * 欧几里得算法 ：计算两个数：p 和q的最大公约数：
+	 * 
+	 * 1：若q = 0,最大公约数是p,否则用p/q   --- 得到余数r.
+	 * p和q 的最大公约数：是q 和r 的最大公约数
+	 */
+	public static void fucntion(int p,int q){
+		if(){
+			
+		}
+		
+	}
+
+
+
+
+
+
+}

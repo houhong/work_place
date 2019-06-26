@@ -1,0 +1,13 @@
+package it.input.demo1;
+
+/*
+ *  字节流复制文件
+ *   采用数组缓冲提高效率
+ *   字节数组
+ *   FileInputStream 读取字节数组
+ *   FileOutputStream 写字节数组
+ */
+
+public class input {
+
+}

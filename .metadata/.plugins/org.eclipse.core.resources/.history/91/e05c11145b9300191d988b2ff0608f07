@@ -1,0 +1,36 @@
+package com.woniuxy.demo;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+
+
+public class Demo1 {
+	public static int count=0;
+	public static int index=0;
+	public Demo1() {
+    }
+
+    public static void main(String[] args){
+          System.out.println( function("abcabf", "a"));
+           
+          
+    }
+    public static int function(String str,String sub){
+    	
+    	index= str.indexOf(str);
+    	
+    	if(index!=-1){
+    		count++;
+    		return function(str.substring(index), sub);
+    	}
+    	
+    	return count;
+    }
+}
+    
+    
+   

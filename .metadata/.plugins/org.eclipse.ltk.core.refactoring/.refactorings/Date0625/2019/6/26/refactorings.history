@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;operationDao&apos; from expression &apos;new OperationDao()&apos;&#x0D;&#x0A;- Original project: &apos;Date0625&apos;&#x0D;&#x0A;- Variable name: &apos;operationDao&apos;&#x0D;&#x0A;- Destination method: &apos;com.woniuxy.atm.OperationDao.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;new OperationDao()&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;operationDao&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.woniuxy.atm{OperationDao.java" name="operationDao" replace="true" selection="1065 0" stamp="1561476427264" version="1.0"/>
+</session>

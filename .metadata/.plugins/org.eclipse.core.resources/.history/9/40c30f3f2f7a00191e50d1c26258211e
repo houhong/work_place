@@ -1,0 +1,15 @@
+package cn.itcast.demo;
+
+import java.io.File;
+
+/*
+ * File的构造器
+ */
+public class File_conttrstor {
+
+	//主方法
+	public static void main(String[] args) {
+	    File file = new File("f:");
+	    System.out.println();
+	}
+}

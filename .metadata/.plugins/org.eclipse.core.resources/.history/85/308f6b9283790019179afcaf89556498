@@ -1,0 +1,31 @@
+package APIdemo;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+
+/*
+ * 说伸缩性角度看HashMap
+ */
+public class Hashmap {
+
+	public Hashmap() {
+		// TODO 自动生成的构造函数存根
+	}
+	@Test
+	public static void function(){
+
+		//Map
+		
+		HashMap<Object, Object> hashMap = new HashMap<>();
+
+
+
+
+
+
+
+	}
+
+}

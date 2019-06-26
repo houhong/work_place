@@ -1,0 +1,186 @@
+package xom.it.houhong.二叉树;
+
+import java.util.Comparator;
+import java.util.Stack;
+
+/*
+ * 二叉树搜索树
+ */
+
+public class BST<E extends Comparable<E>>{
+
+	//定义节点
+	private class Node{
+
+
+		public E e;
+		public Node left,right;
+		public Node(E e) {
+
+			this.e = e;
+			this.left = null;
+			this.right = null;
+		}
+
+
+
+	}
+
+	private Node root;
+	private int size;
+
+
+
+
+	public BST() {
+		root = null;
+		size = 0;
+	}
+
+
+
+
+	public Node getRoot() {
+		return root;
+	}
+
+
+
+
+	public void setRoot(Node root) {
+		this.root = root;
+	}
+
+
+
+
+	public int getSize() {
+		return size;
+	}
+
+
+
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+
+	//插入元素  -- 用递归
+	private Node add(Node node,E e){
+
+		if (node == null) {
+			return new Node(e);
+		} else {
+			if (e.compareTo(node.e) < 0 && node.left == null) {
+				node.left = new Node(e);
+			} else  if (e.compareTo(node.e) > 0 && node.right == null) {
+				node.right=new Node(e);
+			}
+		}
+		return node;
+
+
+	}
+
+	//二叉树是否含有元素e
+	public boolean contains(E e){
+
+		return contains(root,e);
+
+	}
+	//查看以root为跟的二叉树是否含有元素e
+	private boolean contains(Node node,E e){
+
+		if(node == null){
+			return false;
+		}
+		else if (e.compareTo(node.e) ==  0) {
+			return true;
+		}
+		else if(e.compareTo(node.e) < 0){
+
+			return contains(node.left,e);
+
+		}
+		else if (e.compareTo(node.e) > 0) {
+			return contains(node.right, e);
+		}
+
+		return false;
+
+	}
+
+
+
+	//前序遍历的非递归实现
+	public void preOrderNR(Node node ){
+
+		Stack<Node>  stack = new Stack<>();
+    
+		
+		while(true){
+    	stack.push(node);
+
+		//当前栈不为空 记录需要操作的节点
+		if(!stack.isEmpty()){
+			//拿出需要操作的节点
+			Node  cur =	stack.pop();
+			//操作
+			System.out.println(cur.e);
+			
+			stack.push(cur.right);
+			stack.push(cur.left);
+
+
+		}
+
+    }
+		
+
+
+	}
+
+
+
+
+
+
+	@Override
+	public String toString(){
+		StringBuilder res = new StringBuilder();
+		generateBSTString(root, 0, res);
+		return res.toString();
+	}
+
+	//二叉树的生成
+	private void generateBSTString(Node node, int depth, StringBuilder res)
+	{
+
+		if(node == null){
+			res.append(generateDepthString(depth) + "null\n");
+			return;
+		}
+
+		res.append(generateDepthString(depth) + node.e + "\n");
+		generateBSTString(node.left, depth + 1, res);
+		generateBSTString(node.right, depth + 1, res);
+	}
+
+	private String generateDepthString(int depth){
+		StringBuilder res = new StringBuilder();
+		for(int i = 0 ; i < depth ; i ++)
+			res.append("--");
+		return res.toString();
+	}
+
+
+}
+
+
+
+
+
+
+
+

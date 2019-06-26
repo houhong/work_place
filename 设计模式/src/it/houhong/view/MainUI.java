@@ -1,0 +1,123 @@
+package it.houhong.view;
+import it.houhong.model.Administrator;
+import it.houhong.model.User;
+
+import java.util.Scanner;
+/**
+ * @author Administrator
+ * 一级界面实现类
+ */
+public class MainUI {
+//	static String[] operation = new String[20];//存放用户操作记录的数组
+	static User[] user = new User[10];//存放用户信息的数组
+	static Administrator[] ad = new Administrator[10];//存放管理员信息的数组
+	static int index = -1;//默认用户或管理员的下标为-1
+	//默认添加两个用户和一个管理员
+	public MainUI() {
+		User user_01 = new User("张三","123",1000,1);
+		User user_02 = new User("李四","111",1000,1);
+		Administrator ad_01 = new Administrator("王五","111");
+		user[0] = user_01;
+		user[1] = user_02;
+		ad[0] = ad_01;
+	}
+	//查找用户的数组下标
+	public int findUser(String name) {
+		int index = -1;
+		for(int i = 0;i < user.length;i++) {
+			if(null != user[i] && name.equals(user[i].getName())) {
+				index = i;
+			}
+		}
+		return index;
+	}
+	//查找管理员的数组下标
+	public int findAdministrator(String name) {
+		int index = -1;
+		for(int i = 0;i < ad.length;i++) {
+			if(null != ad[i] && name.equals(ad[i].getName())) {
+				index = i;
+			}
+		}
+		return index;
+	}
+	//登录
+	public void login() {
+		Scanner sca = new Scanner(System.in);
+		System.out.println("==请输入账号：==");
+		String name = sca.next();
+		//验证用户是否存在
+		index = findUser(name);
+		if(index == -1) {
+			index = findAdministrator(name);
+			if(index != -1) {//管理员账号验证成功
+				System.out.println("==请输入密码：==");
+				String pwd = sca.next();
+				//验证密码是否正确
+				if(pwd.equals(ad[index].getPassWord())) {
+					System.out.println("==登录成功！==");
+					//跳转到管理员二级界面
+					new Select().adSubUI();
+				}else {
+					System.out.println("==密码输入有误！==");
+					login();
+				}
+			}else {
+				System.out.println("账号输入有误！");
+				login();
+			}
+		}else {//用户账号验证成功
+			System.out.println("==请输入密码：==");
+			String pwd = sca.next();
+			if(pwd.equals(user[index].getPassWord())) {
+				System.out.println("==登录成功！==");
+				//判断用户是否被冻结 如果被冻结则不能跳转到二级界面
+				if(user[index].getFrozen() == 1) {
+					//跳转到用户二级界面
+					new Select().subUI();
+				}else {
+					System.out.println("您的账号已被冻结，请联系前台！");
+					System.exit(0);
+				}
+			}else {
+				System.out.println("==密码输入有误！==");
+				login();
+			}
+		}
+	}
+	//注册
+	public void enroll() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("==请输入账号：==");
+		String name = sc.next();
+		//检查用户名是否存在
+		index = findUser(name);
+		if(index == -1) {
+			System.out.println("==请输入密码：==");
+			String pwd = sc.next();
+			//如果用户数组有空位置，将注册用户添加进去
+			User users = new User(name,pwd,0,1);
+			for(int i = 0;i < user.length;i++) {
+				if(null == user[i]) {
+					user[i] = users;
+					break;
+				}else {
+					System.out.println("用户数组已满，无法创建新用户。。。");
+					break;
+				}
+			}
+			System.out.println("注册成功！");
+			//回到一级界面
+			new Select().mainUI();
+		}else {
+			System.out.println("==账号已存在!==");
+			enroll();
+		}
+		
+		
+		
+		
+		
+		
+	}
+}

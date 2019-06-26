@@ -1,0 +1,24 @@
+package demo;
+/*
+ * Èý½ÇÐÎ
+ */
+
+public class Demo1 {
+
+	public Demo1() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		
+		for (int i = 1; i < 7; i++) {
+			for (int j = 0; j < 7; j++) {
+		
+				
+				
+			}
+			System.out.println();
+		}	
+	}
+
+}

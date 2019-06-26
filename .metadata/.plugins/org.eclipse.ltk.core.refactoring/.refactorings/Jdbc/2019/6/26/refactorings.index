@@ -1,0 +1,4 @@
+1561362681798	Extract local variable 'connection'
+1561362781089	Extract local variable 'connection'
+1561363295119	Extract local variable 'createStatement'
+1561363396781	Extract local variable 'result'

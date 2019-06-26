@@ -1,0 +1,75 @@
+package LinkTable;
+
+import javax.sound.midi.MidiChannel;
+/*
+ *   二分查找  -- 有序数组用二分查找  --- 
+ *   欧几里得算法
+ */
+
+public class Test1 {
+
+	public Test1() {
+		// TODO 自动生成的构造函数存根
+	}
+
+	public static void main(String[] args) {
+		
+		 int[] whiteList = 
+		
+
+
+	}
+
+	/*public static int ranl(int key,int[] a){
+
+		int lo = 0;
+		int hi = a.length -1;
+
+		while(lo<= hi ){
+
+			int mid = lo+ (hi - lo)/2;
+			//二分
+			if (key <a[mid]) {
+				hi = mid -1;
+			} else if(key > a[mid]){
+				lo = mid +1;
+			}
+			else{
+				return  mid;
+			}
+
+		}
+		return -1;
+	}
+	 */
+
+	/*   二分查找  -- 缩小范围    -- 条件：arr是有序的*/
+	//等于 -1 表示 没找到
+	public static int binarySerach(int key,int[] arr){
+		//条件：数组有序	
+		int lo = 0;
+		int hi = arr.length -1;
+
+		while(lo<= hi){
+
+			int mid = (hi - lo)/2;
+			//如果当前数据<中数据 在数组单位左边
+			if (key <=arr[mid]) {
+				hi = arr[mid];
+			} else if(key>arr[mid]) {
+				lo= arr[mid];
+			}else{
+				return mid;
+			}
+
+		}
+		return -1;
+
+	}
+
+
+
+
+
+
+}

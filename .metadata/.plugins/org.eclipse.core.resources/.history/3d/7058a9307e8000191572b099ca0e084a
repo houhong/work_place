@@ -1,0 +1,22 @@
+package LinkTable;
+/*
+ *   二分查找
+ */
+
+public class Test1 {
+
+	public Test1() {
+		// TODO 自动生成的构造函数存根
+	}
+
+	  public static void main(String[] args) {
+		
+		  
+		  
+		  
+	}
+	  
+	public static int ranl(int key,int[] a){
+		
+	}
+}

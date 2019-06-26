@@ -1,0 +1,20 @@
+1561016093917	Extract local variable 'iterator'
+1561016365543	Extract local variable 'initPoke'
+1561017744130	Extract local variable 'ran'
+1561020219218	Extract local variable 'iterator'
+1561020263563	Extract local variable 'next'
+1561021743227	Delete element
+1561028951865	Extract local variable 'bufferedWriter'
+1561035861852	Delete element
+1561049211063	Delete element
+1561049644175	Delete element
+1561051138383	Extract local variable 'iterator'
+1561051155428	Extract local variable 'next'
+1561054188762	Extract local variable 'pro'
+1561054250627	Extract local variable 'file'
+1561054287752	Extract local variable 'fis'
+1561054465542	Extract local variable 'fos'
+1561055750116	Extract local variable 'stu'
+1561056664557	Extract local variable 'oos'
+1561057769013	Extract local variable 'ois'
+1561057825209	Extract local variable 'readObject'

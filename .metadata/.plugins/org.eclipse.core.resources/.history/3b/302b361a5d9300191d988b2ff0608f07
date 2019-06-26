@@ -1,0 +1,40 @@
+package com.woniuxy.demo;
+/*
+ * 1.计算字符串中子串出现的次数
+   	如:请输入字符串：abcdjsaaabcbsaaadda
+     请输入子串：aa
+    子串在字符串中出现: 4 次
+ */
+
+public class Demo1 {
+
+	public Demo1() {
+		// TODO Auto-generated constructor stub
+	}
+	public static void main(String[] args) {
+		function("abc", "a");
+	}
+	
+	
+	public static int function(String str,String sub){
+		
+		int count =0;
+		int index=0;
+	 
+	     
+	     while(str.length()>=0){
+	    	 
+	    	index =str.indexOf(sub,index)+1;
+	    	str = str.substring(count);
+	    	if(count!= -1){
+	    		count++;
+	    	}
+	     }
+		
+		
+		return count;
+		
+		
+	}
+
+}

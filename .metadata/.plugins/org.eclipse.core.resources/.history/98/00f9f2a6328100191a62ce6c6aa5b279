@@ -1,0 +1,174 @@
+package com.itwoniu.tank.view;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
+
+import com.itwoniu.tank.contents.Constants.PANLE;
+import com.itwoniu.tank.contents.Constants.WIN;
+import com.itwoniu.tank.model.BackImage;
+import com.itwoniu.tank.model.HeroTank;
+import com.itwoniu.tank.model.Shell;
+
+/**
+ * @author layker  --这是一个画图类
+ *
+ */
+public class GamePane extends JPanel{
+
+	//定义个int 变量   -- 》 去接收当前子弹的位置   -- > int == PANLE 的边界 
+	//isBoom == ture;
+	public int currentPostion;
+	public BackImage backImage ;
+	public HeroTank  heroTank;
+	public Shell     shell;
+	public List<Shell> shellList;
+
+	public boolean isBoom=false;//用于判断是否爆炸 -- 初始为不爆炸
+
+	public GamePane() {
+
+		//存储子弹
+		shellList = new ArrayList<>();
+
+		//设置画板大小
+		this.setBounds(0, 0, PANLE.HIGH,PANLE.WIDTH);
+		//设置背景颜色
+		this.setBackground(Color.GREEN);
+		//初始化背景图片
+		backImage = new BackImage();
+
+		heroTank  = new HeroTank();
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+
+			@Override
+			public void run() {
+
+
+				heroTank.swap();
+				//heroTank.move();
+
+				/*if(shell!=null){
+					shell.move();	
+				}*/
+				for (Shell shell : shellList) {
+
+					//移动子弹
+
+					currentPostion = shell.move();
+				}
+
+
+
+				//刷新
+				repaint();
+
+			}
+		}, 0,500);
+
+		//添加键盘键入器
+		this.addKeyListener(new KeyAdapter() {
+
+			@Override //观察者模式
+			public void keyPressed(KeyEvent e) {
+
+				String keyDir = String.valueOf(e.getKeyChar());
+
+				if("wasd".contains(keyDir)){
+
+					heroTank.move(keyDir);
+				}
+
+				if("j".contains(keyDir)){
+
+					//创造一个子弹
+					shell=new Shell(heroTank.tankDir, (heroTank.x + heroTank.TANK_LENGTH), heroTank.y);                         
+					shellList.add(shell);
+				}
+			}
+
+
+		});
+
+		this.setFocusable(true);
+
+	}
+
+
+
+
+	@Override
+	public void paint(Graphics g) {
+		// TODO 自动生成的方法存根
+
+		//BufferedImage read = ImageIO.read(new File("images/Win/backImg.png"));
+		//BufferedImage read1 = ImageIO.read(new File("images/Star/star1.png"));
+		g.drawImage(backImage.image, 0, 0, WIN.HIGH,WIN.WIDTH,null);
+
+		g.drawImage(heroTank.getFirst(), heroTank.x, heroTank.y,heroTank.TANK_LENGTH,heroTank.TANK_WIDTH,null);
+		printShell(g);
+		//
+
+		//  -- 要重新加载定时器
+		//写个定时器：定时输出这里
+		//Timer timer = new Timer();
+		/*timer.schedule(new TimerTask() {
+
+					@Override
+					public void run() {
+						// TODO 自动生成的方法存根
+						System.out.println(count++);
+
+						;
+						g.drawImage(heroTank.imgae, 80, 0,32,32,null );
+						//g.drawImage(heroTank.imgae1, 80, 0,32,32,null);
+					}
+				}, 0,1000);	
+		 */
+
+	}
+	/*
+	 * 写了要将其画进来   ---求求你长点心吧：这个类的运行机制要清楚
+	 */
+	public void  printShell(Graphics g){
+
+		/*if (shell !=null) {
+			g.drawImage(shell.image, shell.x, shell.y, null);
+		}*/
+		//打印子弹集合
+		for (Shell shell : shellList) {
+			if (!isBoom) {
+				g.drawImage(shell.image, shell.x, shell.y, null);
+			} else {
+				//打印爆炸  -- 画8张图片
+			}
+
+		}
+
+
+
+	}
+
+}
+
+
+
+
+
+
+
+
+

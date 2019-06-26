@@ -1,0 +1,33 @@
+package demo;
+/*
+ * 三角形
+ * 1.输出三角形
+        *
+       ***
+      *****
+     *******
+    *********
+   ***********
+  *************
+ ***************
+*/
+
+public class Demo1 {
+
+	public Demo1() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) {
+		int row=4;
+		int comn=row*2-1;
+		for (int i = 1; i <= row; i++) {
+			
+			//打印两个三角形
+			for (int j = 0; j <row-i; j++) {
+				System.out.print(" ");
+			}
+		}	
+	}
+
+}

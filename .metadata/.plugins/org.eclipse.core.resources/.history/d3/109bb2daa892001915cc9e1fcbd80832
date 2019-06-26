@@ -1,0 +1,11 @@
+package com.woniuxy.atm05;
+/**
+ * @author Administrator
+ * ≤‚ ‘
+ */
+public class Test {
+	public static void main(String[] args) {
+		Select s = new Select();
+		s.mainUI();
+	}
+}

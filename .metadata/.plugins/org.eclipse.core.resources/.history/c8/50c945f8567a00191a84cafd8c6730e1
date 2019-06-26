@@ -1,0 +1,25 @@
+package it.input.demo2;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+
+
+import sun.applet.Main;
+/*
+ * 将一个文件复制到另一个文件：
+ */
+
+public class copy {
+
+	public static void main(String[] args) throws Exception{
+
+		//1:创建输入流-- 将硬盘的文件读取到内存
+		FileInputStream fis = new FileInputStream("f:\\qq文件");
+		//2:创建输出流 -- 将内存的文件输出到硬盘
+		FileOutputStream fis= new FileOutputStream("d:\\qq文件");
+
+
+		new FileOutputStream("");
+	}
+}

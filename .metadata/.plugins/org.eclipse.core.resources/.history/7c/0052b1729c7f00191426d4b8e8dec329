@@ -1,0 +1,12 @@
+package Io_练习题;
+/*
+ * Java基础面试操作题： File IO 文件过滤器FileFilter 练习 把一个文件夹下的.java文件复制到另一个文件夹下的.txt文件 
+ */
+
+public class homework5 {
+
+	public homework5() {
+		// TODO 自动生成的构造函数存根
+	}
+
+}

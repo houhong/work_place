@@ -1,0 +1,45 @@
+package xom.it.houhong.¶ş²æÊ÷;
+/*
+ * ²âÊÔÀà
+ */
+
+public class Test {
+
+	public Test() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+
+		//BST1<Integer> bst = new BST1<>();
+		int[] nums = {5, 3, 6, 8, 4, 2};
+		for(int num: nums)
+			bst.add(num);
+
+		/////////////////
+		//      5      //
+		//    /   \    //
+		//   3    6    //
+		//  / \    \   //
+		// 2  4     8  //
+		/////////////////
+		
+		
+	    //	bst.postOrder();
+		/*bst.preOrderNR();
+		System.out.println();
+
+		System.out.println(bst);*/
+		
+		bst.postOrder();
+		System.out.println();
+
+		System.out.println(bst);
+		
+	   /* bst.inOrder();
+		System.out.println();
+
+		System.out.println(bst);*/
+	}
+
+}

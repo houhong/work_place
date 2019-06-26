@@ -1,0 +1,13 @@
+package com.woniuxy.demo;
+
+public class Snippet {
+	2. 用代码实现以下需求
+		(1)有如下字符串"If you want to change your fate I think you must come to the dark horse to learn java"(用空格间隔)
+		(2)打印格式：
+			to=3
+			think=1
+			you=2
+			//........
+		(3)按照上面的打印格式将内容写入到D:\\count.txt文件中(要求用高效流)
+}
+

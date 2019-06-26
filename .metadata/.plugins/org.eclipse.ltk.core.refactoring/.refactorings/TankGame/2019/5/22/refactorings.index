@@ -1,0 +1,44 @@
+1558938418145	重命名包“com.itwoniu”
+1558938450188	重命名包“com.itwoniu.Controller”
+1558938459757	重命名包“com.itwoniu.Model”
+1558938479409	重命名包“com.itwoniu.View”
+1558938494864	重命名包“com.itwoniu.tabk.Model”
+1558938509445	重命名包“com.itwoniu.tank.Controller”
+1558938517656	重命名包“com.itwoniu.tank.Model”
+1558938526411	重命名包“com.itwoniu.tank.View”
+1558938570733	重命名类型“gameStart”
+1558938617345	抽取局部变量“jf”
+1558939231235	抽取局部变量“width”
+1558939275015	抽取局部变量“height”
+1558939462417	抽取局部变量“jf”
+1558942824965	删除元素
+1558942870807	删除元素
+1558942991344	抽取局部变量“read”
+1558943090676	抽取局部变量“gameFrame”
+1558943281981	抽取局部变量“gamePane”
+1558943369238	抽取局部变量“gamePane”
+1558945379788	删除元素
+1558947524754	删除元素
+1558947542069	删除元素
+1558947572506	删除元素
+1558948394730	重命名包“com.itwoniu.tank.sonstens”
+1559010746844	删除元素
+1559011169519	抽取局部变量“dir”
+1559014689053	抽取局部变量“entrySet”
+1559015548157	删除元素
+1559035521932	删除元素
+1559039263475	抽取局部变量“boom”
+1559039649630	抽取局部变量“linkedList”
+1559039798014	抽取局部变量“imgaes”
+1559100137288	抽取局部变量“iterator”
+1559100739413	抽取局部变量“random”
+1559101853655	抽取局部变量“random”
+1559103079920	抽取局部变量“timer2”
+1559115258973	Extract local variable 'iterator'
+1559181253091	Extract local variable 'random'
+1559182091804	Extract local variable 'random'
+1559189197072	Extract local variable 'arr'
+1559189688495	Delete element
+1559190027742	Delete element
+1559190227999	Extract local variable 'nftd'
+1559217568253	Copy folder

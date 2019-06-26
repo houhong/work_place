@@ -1,0 +1,9 @@
+package cn.itcast.demo2;
+
+public class StringDemo {
+
+	public StringDemo() {
+		// TODO 自动生成的构造函数存根
+	}
+
+}

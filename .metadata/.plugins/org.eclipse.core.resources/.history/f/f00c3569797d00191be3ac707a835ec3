@@ -1,0 +1,9 @@
+package 作业3;
+
+public class Renew {
+
+	public Renew() {
+		// TODO 自动生成的构造函数存根
+	}
+
+}

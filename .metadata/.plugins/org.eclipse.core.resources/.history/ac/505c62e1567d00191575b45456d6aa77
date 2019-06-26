@@ -1,0 +1,37 @@
+package 作业2;
+
+public class Input implements Runnable{
+
+	int i=0;
+	public Resource re;
+	public Input(Resource re) {
+		this.re = re;
+	}
+
+	@Override
+	public   void run() {
+		// TODO 自动生成的方法存根
+
+		while(true){
+			//使输出线程等待
+			synchronized(re){
+				
+			      System.out.println("我是输出");
+				
+				try {
+					re.wait();
+				} catch (InterruptedException e) {
+					// TODO 自动生成的 catch 块
+					e.printStackTrace();
+				}
+
+
+			}
+
+		}
+
+
+
+	}
+
+}

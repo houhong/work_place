@@ -1,0 +1,10 @@
+package it.input.demo1;
+/*
+ * Êä³öÁ÷ 
+ */
+
+public class output {
+  public static void main(String[] args) {
+	
+}
+}

@@ -1,0 +1,9 @@
+package cn.itcast.demo3;
+
+public class shuati {
+
+	public shuati() {
+		// TODO 自动生成的构造函数存根
+	}
+
+}

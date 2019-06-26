@@ -1,0 +1,17 @@
+package demo;
+/*
+ * 次数最大的人
+ */
+
+public class Person {
+	
+	public String name;
+	public String age;
+	public int    count;
+
+	public Person() {
+		// TODO 自动生成的构造函数存根
+	}
+	
+
+}

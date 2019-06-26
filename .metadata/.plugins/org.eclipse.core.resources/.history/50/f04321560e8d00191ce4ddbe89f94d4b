@@ -1,0 +1,52 @@
+package demo;
+/*
+ * 6.编写程序解决“百钱买百鸡”问题。
+ * 公鸡五钱一只，母鸡三钱一只，小鸡一钱三只，
+ * 现有百钱欲买百鸡，共有多少种买法？
+ */
+
+public class Demo6 {
+
+	public Demo6() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public static void main(String[] args) {
+		function();
+	}
+	
+	public static void function(){
+		
+		int count=0;
+		
+		//i,j,k 表示当前的个数
+		for (int i = 0; i < 100; i+=5) {
+			
+			for (int j = 0; j < 100; j+=3) {
+				
+				for (int k = 0; k < 100; k++) {
+					
+					if((i+j+k)==100){
+						
+						if((i/5+j/3+k*3)==100){
+							System.out.println("公鸡的钱"+i);
+							System.out.println("母鸡的钱"+j/3);
+							System.out.println("小鸡的钱"+k*3);
+							System.out.println("公鸡的个数"+i/5);
+							System.out.println("母鸡的个数"+j/3);
+							System.out.println("小鸡的个数"+k*3);
+							count++;
+						}
+					}
+				}
+			}
+		}
+		System.out.println(count);
+		
+		
+	
+		
+	}
+
+}

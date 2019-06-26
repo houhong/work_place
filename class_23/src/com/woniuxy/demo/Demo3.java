@@ -1,0 +1,47 @@
+package com.woniuxy.demo;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.Properties;
+
+/*
+ * //装饰者模式
+ * (3)按照上面的打印格式将内容写入到D:\\count.txt文件中(要求用高效流)
+3.用代码实现以下需求：
+	(1)已知配置文件config.properties中有三个键值对
+   		name=zhangsan
+   		score=80
+   		address=beijing
+	(2)使用IO字节流对象和Properties类结合使用,将配置文件中的score键的值修改为100
+ */
+public class Demo3 {
+
+	public Demo3() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static void main(String[] args) throws Exception{
+		function("score", "10");
+		
+	}
+	public static void function(String key,String value) throws Exception{
+
+		Properties pro = new Properties();
+		//注意一点：地址的获取
+		File file = new File("config.properties");
+		
+		//输入流
+		FileInputStream fis = new FileInputStream(file);
+		
+		pro.load(fis);
+		
+		pro.setProperty(key, value);
+		FileOutputStream fos = new FileOutputStream(file);
+		pro.store(fos, "");
+		
+		fos.close();
+		fis.close();
+	}
+
+}

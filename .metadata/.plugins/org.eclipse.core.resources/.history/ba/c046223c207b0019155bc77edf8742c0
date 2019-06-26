@@ -1,0 +1,23 @@
+package cn.itcast.demo2;
+/*
+ * String类的Demo
+ * 
+ */
+
+public class StringDemo {
+
+	public StringDemo() {
+		// TODO 自动生成的构造函数存根
+	}
+
+	public static void main(String[] args) {
+		
+	}
+	public static void fucntion(){
+		
+		String str1="i love you!!!";
+		String str2=str1.trim();
+		System.out.println();
+	}
+
+}

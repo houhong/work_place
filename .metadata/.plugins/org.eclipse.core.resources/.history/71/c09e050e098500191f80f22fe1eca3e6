@@ -1,0 +1,29 @@
+package xom.it.houhong.¶þ²æÊ÷;
+
+
+//·ºÐÍÀà
+public class BST1 <E extends Comparable<E>>{
+
+	
+	
+	
+	private class Node{
+		
+		E e;
+		Node left,right;
+
+		public Node() {
+			this.e = e;
+		    this.left = null;
+		    this.right =null;
+		}
+		
+		
+		
+		
+	}
+	public BST1() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

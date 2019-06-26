@@ -1,0 +1,54 @@
+package 作业1;
+
+
+
+public class Output implements Runnable{
+   
+	int count = 97;
+	public Resource re;
+	public Output(Resource re) {
+		this.re = re;
+	}
+
+	@Override
+	public void run() {
+
+		while(true){
+			synchronized(re){
+
+				if(re.flag == false){
+					re.notify();
+					re.setFlag(true);
+				}
+
+				/*
+					String str = "abcdefghijklmnopqrstvuwxyz";
+					byte[] byteArray = str.getBytes();
+					for(int i =0;i<byteArray.length;i++){
+						//输出 数字＋” “
+						System.out.print((char)byteArray[i]+" ");
+						count++;
+					}
+					if(count==25){
+						break;
+					}
+*/
+				 System.out.print((char)count+" ");
+				 count++;
+				 if(count>=123){
+					 break;
+				 }
+
+
+				try {
+					re.wait();
+				} catch (InterruptedException e) {
+					// TODO 自动生成的 catch 块
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,6 @@
+package com.woniuxy.demo;
+
+public class Snippet {
+	git config --global -l
+}
+

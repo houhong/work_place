@@ -1,0 +1,27 @@
+package demo;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+/*
+ * 字节输入流  -- 复制
+ */
+public class demo {
+
+	public demo() {
+		// TODO 自动生成的构造函数存根
+	}
+	
+	public static void main(String[] args) {
+		FileInputStream in  args= new FileInputStream(file)：
+	}
+	
+	
+	
+	
+
+}

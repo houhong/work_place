@@ -1,0 +1,64 @@
+package Io_练习题;
+
+import java.io.File;
+import java.io.FileFilter;
+
+import String练习题.string;
+
+/*
+ * FileFliter
+ * 
+ */
+
+public class Homework4 {
+
+	public Homework4() {
+		// TODO 自动生成的构造函数存根
+	}
+
+	public static void main(String[] args) {
+
+		getDir("E:\\java_workspace_3\\JavaSe练习题");	
+
+	}
+
+	public static void getDir(String path){
+		
+		File file = new File(path);
+
+		/*//文件过滤器
+		FileFilter ff = new FileFilter() {
+
+			@Override
+			public boolean accept(File pathname) {
+
+				String path = pathname.getName().toLowerCase();
+
+				if (path.endsWith(".java")) {
+					return true;
+				} else {
+					return false;
+				}
+				// TODO 自动生成的方法存根
+
+			}
+		};*/
+
+		File[] first = file.listFiles(ff);
+
+		for (File subFile : first) {
+
+			if (!subFile.isDirectory()) {
+				System.out.println(subFile.toString());
+			} else {
+				getDir(subFile.toString());
+			}
+
+
+
+		}
+
+	}
+
+
+}

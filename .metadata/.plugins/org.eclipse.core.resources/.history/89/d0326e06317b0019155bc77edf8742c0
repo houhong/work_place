@@ -1,0 +1,18 @@
+package cn.itcast.demo2;
+
+import java.io.File;
+/*
+ *  对一个目录的下的所有内容,进行完全的遍历
+ *  编程技巧,方法的递归调用,自己调用自己
+ */
+
+public class AbsoluteReturn {
+
+	public AbsoluteReturn() {
+		// TODO 自动生成的构造函数存根
+	}
+	public static void getAllDirctory(File file){
+		
+	}
+ 
+}

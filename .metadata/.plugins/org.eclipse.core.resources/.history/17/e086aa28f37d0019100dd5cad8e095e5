@@ -1,0 +1,9 @@
+package 集合;
+
+public class Demo1 {
+
+	public Demo1() {
+		// TODO 自动生成的构造函数存根
+	}
+
+}

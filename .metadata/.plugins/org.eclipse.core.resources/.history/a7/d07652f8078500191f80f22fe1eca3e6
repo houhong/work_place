@@ -1,0 +1,25 @@
+package xom.it.houhong.¶þ²æÊ÷;
+
+import org.omg.CORBA.PRIVATE_MEMBER;
+
+public class BST1 {
+
+	
+	
+	
+	private class Node{
+
+		public Node() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+		
+		
+		
+		
+	}
+	public BST1() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

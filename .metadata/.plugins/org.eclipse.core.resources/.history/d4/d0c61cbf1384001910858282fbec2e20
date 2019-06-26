@@ -1,0 +1,127 @@
+package com.it.houhong.model;
+
+import java.awt.image.BufferedImage;
+/*
+ * tank 类
+ */
+
+import java.util.Map;
+import java.util.Random;
+
+import org.omg.CORBA.PUBLIC_MEMBER;
+
+public class Tank {
+
+
+	//坐标轴
+	public int x,y;
+
+	//坦克自己的速度
+	public int step;
+	//坦克的方向
+	public String tankDir;
+
+	//存放坦克的方向的实现图片
+	public Map<String, BufferedImage[]> dirMap;
+	public BufferedImage[] images;
+
+
+	//大小
+	public int length,width;
+
+	public Tank() {
+
+
+	}
+
+
+	//得到第一张图片
+	public BufferedImage getFirst(){
+
+		return dirMap.get(tankDir)[0];
+	}
+
+
+
+	//
+	public void swap(){
+
+
+		BufferedImage temp;
+		temp = dirMap.get(tankDir)[0];
+		dirMap.get(tankDir)[0]=dirMap.get(tankDir)[1];
+		dirMap.get(tankDir)[1] =temp;
+
+
+	}
+
+	//根据坦克的方位
+	public void move(String dir){
+
+
+		switch (dir) {
+		case "w":
+			if (!dir.equals(tankDir)) {
+				this.tankDir =dir;
+			} else {
+				this.y-=step;
+			}
+
+			break;
+		case "s":
+			if (!dir.equals(tankDir)) {
+				this.tankDir =dir;
+			} else {
+				this.y+=step;
+			}
+			break;
+		case "a":
+			if (!dir.equals(tankDir)) {
+				this.tankDir =dir;
+			} else {
+				this.x-=step;
+			}
+			break;
+		case "d":
+			if (!dir.equals(tankDir)) {
+				this.tankDir =dir;
+			} else {
+				this.x+=step;
+			}
+			break;
+		default:
+			break;
+
+		}
+
+
+
+
+	}
+
+
+
+
+
+	//坦克的方位
+	public void dir(String dir){
+
+		images =dirMap.get(dir);
+
+	}
+
+	//随机的位置
+	public int[]  randomXY(){
+
+		int[] XY = new int[2];
+		Random random = new Random();
+		XY[0] = random.nextInt(600);
+		XY[1] = random.nextInt(600);
+		retunrn XY;
+
+
+	}
+}
+
+
+

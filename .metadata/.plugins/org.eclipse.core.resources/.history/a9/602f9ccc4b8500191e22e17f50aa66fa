@@ -1,0 +1,12 @@
+package xom.it.houhong.¶ş²æÊ÷;
+/*
+ * ¶ş²æÅÅĞòÊ÷
+ */
+
+public class BST<E extends Comparable<E>>{
+
+	public BST() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

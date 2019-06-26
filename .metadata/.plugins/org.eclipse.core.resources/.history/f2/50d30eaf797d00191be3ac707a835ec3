@@ -1,0 +1,49 @@
+package 作业3;
+/*
+ *   abc abc
+ */
+
+public class Renew {
+
+	public Renew() {
+		// TODO 自动生成的构造函数存根
+	}
+
+	public static void main(String[] args) {
+		
+		//t0
+		Thread t0 = new Thread("线程一"){
+
+			@Override
+			public void run() {
+				// TODO 自动生成的方法存根
+				super.run();
+			}
+			  
+		};
+		
+		Thread t1 = new Thread("线程二"){
+
+			@Override
+			public void run() {
+				// TODO 自动生成的方法存根
+				
+			}
+			  
+		};
+		
+		
+		Thread t2 = new Thread("线程三"){
+
+			@Override
+			public void run() {
+				// TODO 自动生成的方法存根
+				super.run();
+			}
+			  
+		};
+		
+	}
+	
+
+}

@@ -1,0 +1,47 @@
+package com.woniuxy.demo;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/*
+ * 2. 用代码实现以下需求
+	(1)有如下字符串"If you want to change your fate I think you must come to the dark horse to learn java"(用空格间隔)
+	(2)打印格式：
+		to=3
+		think=1
+		you=2
+		//........
+	(3)按照上面的打印格式将内容写入到D:\\count.txt文件中(要求用高效流)
+ */
+
+public class Demo2 {
+
+	public Demo2() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void function(){
+		
+		String str = "If you want to change your fate I think you must come to the dark horse to learn java";
+		String[] arr =str.split(" ");
+
+		
+		/*hashMap做统计表*/
+		Map<String, Integer> hmMap = new HashMap<>();
+		int i=1;
+		int j=1;
+		boolean(i != j)?i=1:j=2;
+		for (String string : arr) {
+			
+			 
+			/*hmMap.containsKey(string)?hmMap.put(string, hmMap.get(string)+1):hmMap.put(string, 1);*/
+		}
+		
+		
+	}
+}

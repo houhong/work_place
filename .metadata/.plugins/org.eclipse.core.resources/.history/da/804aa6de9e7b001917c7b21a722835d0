@@ -1,0 +1,12 @@
+package demo;
+/*
+ * 
+ */
+
+public class Person {
+
+	public Person() {
+		// TODO 自动生成的构造函数存根
+	}
+
+}

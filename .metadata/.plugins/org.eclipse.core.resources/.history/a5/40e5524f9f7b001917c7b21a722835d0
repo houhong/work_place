@@ -1,0 +1,19 @@
+package demo;
+
+import java.util.HashMap;
+
+/*
+ * 给出文本：找到最大值！！！！  例如： 
+ */
+
+public class FindMax {
+
+	public FindMax() {
+		// TODO 自动生成的构造函数存根
+	}
+	public static void main(String[] args) {
+		
+		HashMap<String, Person> hm = new HashMap<String,Person>();
+	}
+
+}

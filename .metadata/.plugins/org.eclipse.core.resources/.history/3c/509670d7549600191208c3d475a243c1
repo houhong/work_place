@@ -1,0 +1,31 @@
+package it.houhong.jdbc.firstDay;
+
+import java.sql.DriverManager;
+
+import org.junit.Test;
+
+import com.mysql.jdbc.Connection;
+
+public class Demo1 {
+
+	public Demo1() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Test
+	public void test1(){
+		String url="jdbc:myql://localhost";
+		try {
+			//注册链接
+			Class.forName("com.mysql.jdbc.Driver");
+			//获得链接
+			java.sql.Connection connection = DriverManager.getConnection(url);
+			System.err.println();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

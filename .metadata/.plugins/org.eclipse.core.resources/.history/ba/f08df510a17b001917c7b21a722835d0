@@ -1,0 +1,58 @@
+package demo;
+/*
+ * 次数最大的人
+ */
+
+public class Person {
+	
+	public String name;
+	public String age;
+	public int    count;
+
+	public Person() {
+		// TODO 自动生成的构造函数存根
+	}
+	
+	public Person(String name,String age,int   count){
+		this.name = name;
+		this.age=age;
+		this.count=count;
+	}
+
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + ", count=" + count
+				+ ", getName()=" + getName() + ", getAge()=" + getAge()
+				+ ", getCount()=" + getCount() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
+	
+	
+}
